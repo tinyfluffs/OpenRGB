@@ -336,6 +336,12 @@ SUBSYSTEMS=="usb", ATTR{idVendor}=="0951", ATTR{idProduct}=="16e2", TAG+="uacces
 SUBSYSTEMS=="usb", ATTR{idVendor}=="0951", ATTR{idProduct}=="1705", TAG+="uaccess"
 
 #---------------------------------------------------------------#
+#  Lenovo Legion Laptops                                        #
+#---------------------------------------------------------------#
+SUBSYSTEMS=="usb", ATTR{idVendor}=="048d", ATTR{idProduct}=="c955", TAG+="uaccess"
+SUBSYSTEMS=="usb", ATTR{idVendor}=="048d", ATTR{idProduct}=="c956", TAG+="uaccess"
+
+#---------------------------------------------------------------#
 #  Lian Li Uni Hub                                              #
 #---------------------------------------------------------------#
 SUBSYSTEMS=="usb", ATTR{idVendor}=="0cf2", ATTR{idProduct}=="7750", TAG+="uaccess"
