@@ -15,8 +15,8 @@
 #include <libusb-1.0/libusb.h>
 
 #define LENOVO_LEGION_KBD_VID 0x048D
-#define LENOVO_LEGION_5I__KBD_PID 0xC955
-#define LENOVO_LEGION_5_PRO_KBD_PID 0xC965
+#define LENOVO_LEGION_GEN5_KBD_PID 0xC955
+#define LENOVO_LEGION_GEN6_KBD_PID 0xC965
 
 void DetectLenovoLegionKeyboardControllers(hid_device_info *info, const std::string &name) {
     hid_device *dev = hid_open_path(info->path);
@@ -29,6 +29,5 @@ void DetectLenovoLegionKeyboardControllers(hid_device_info *info, const std::str
     }
 }
 
-REGISTER_HID_DETECTOR("Lenovo Legion 5i Keyboard (Gen5)", DetectLenovoLegionKeyboardControllers, LENOVO_LEGION_KBD_VID,
-                      LENOVO_LEGION_5I__KBD_PID);
-// REGISTER_HID_DETECTOR("Lenovo Legion 5i/5 Pro Keyboard (Gen6)", DetectLenovoLegionKeyboardControllers, LENOVO_LEGION_KBD_VID, LENOVO_LEGION_5_PRO_KBD_PID);
+REGISTER_HID_DETECTOR_I("Lenovo Legion Keyboard", DetectLenovoLegionKeyboardControllers, LENOVO_LEGION_KBD_VID, LENOVO_LEGION_GEN5_KBD_PID, 1);
+REGISTER_HID_DETECTOR_I("Lenovo Legion Keyboard", DetectLenovoLegionKeyboardControllers, LENOVO_LEGION_KBD_VID, LENOVO_LEGION_GEN6_KBD_PID, 1);

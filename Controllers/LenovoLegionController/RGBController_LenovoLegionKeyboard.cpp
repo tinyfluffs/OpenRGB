@@ -13,11 +13,10 @@
 RGBController_LenovoLegionKeyboard::RGBController_LenovoLegionKeyboard(LenovoLegionKeyboardController *controller_ptr) {
     controller = controller_ptr;
 
-    name = "Lenovo Legion Keyboard";
     vendor = "Lenovo";
-    version = "1";
+    version = "Gen5/Gen6";
     type = DEVICE_TYPE_KEYBOARD;
-    description = "Lenovo Legion Keyboard";
+    description = "Lenovo Legion Keyboard Backlight";
     location = controller->GetLocation();
     serial = controller->GetSerial();
 
